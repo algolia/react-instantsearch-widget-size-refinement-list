@@ -1,0 +1,53 @@
+/* ========================= SizeRefinementList Widget */
+.ais-SizeRefinementList {
+  // Transition
+  --transition-duration: 0.2s;
+  // Items grid
+  --items-column-width: 5rem;
+  --items-gap: 1rem;
+  // Colors
+  --refined-color-rgb: 60, 79, 224;
+  --refined-color-alpha: 1;
+
+  --not-refined-rgb: 0, 0, 0;
+  --not-refined-alpha: 0, 0, 0;
+
+  --border-alpha: 0.2;
+
+  // Variables
+  $refined-color: rgba(var(--refined-color-rgb), var(--refined-color-alpha));
+  $not-refined-color: rgba(var(--not-refined-rgb), var(--not-refined-alpha));
+  $border-color: rgba(var(--not-refined-rgb), var(--border-alpha));
+
+  .ais-RefinementList-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--items-column-width), 1fr));
+    gap: var(--items-gap);
+  }
+
+  .ais-RefinementList-item--selected {
+    .ais-RefinementList-label {
+      background-color: $refined-color;
+      font-weight: normal;
+      color: #fff;
+      border-color: $refined-color;
+    }
+  }
+
+  .ais-RefinementList-label {
+    transition: background-color var(--transition-duration) linear,
+      color var(--transition-duration) linear,
+      border-color var(--transition-duration) linear;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $not-refined-color;
+  }
+
+  .ais-RefinementList-checkbox,
+  .ais-RefinementList-count {
+    display: none;
+  }
+}

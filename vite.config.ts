@@ -21,7 +21,6 @@ export default defineConfig({
         'react-dom',
         'react-instantsearch-dom',
         'react-instantsearch-core',
-        'classnames',
       ],
       output: {
         globals: {
@@ -29,7 +28,6 @@ export default defineConfig({
           'react-dom': 'ReactDOM',
           'react-instantsearch-dom': 'ReactInstantSearchDOM',
           'react-instantsearch-core': 'ReactInstantSearchCore',
-          classnames: 'classNames',
         },
       },
     },

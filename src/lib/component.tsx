@@ -1,11 +1,9 @@
 import React from 'react';
-import type { RefinementListProvided } from 'react-instantsearch-core';
 import { createClassNames, RefinementList } from 'react-instantsearch-dom';
 
 import type { SizeRefinementListExposed } from './widget';
 
-export type SizeRefinementListProps = RefinementListProvided &
-  SizeRefinementListExposed;
+export type SizeRefinementListProps = SizeRefinementListExposed;
 
 export const SizeRefinementListComponent = ({
   ...props

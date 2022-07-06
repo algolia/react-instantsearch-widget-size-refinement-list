@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Pane } from 'tweakpane';
 
 const defaultProps = {
-  attribute: 'sizeFilter',
+  attribute: 'available_sizes',
   searchable: false,
   limit: 10,
   showMore: false,
